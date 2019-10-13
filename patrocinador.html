@@ -11,6 +11,70 @@
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
 </style>
 <body>
 
@@ -32,17 +96,17 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   </div>
 </div>
 
-<!-- Cadastro Grid -->
+<!-- Patrocinio Grid -->
   <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
-    <h2 class="w3-wide w3-center">CADASTRO</h2>
-    <p class="w3-opacity w3-center"><i> Cadastre-se como instituição. </i></p>
+    <h2 class="w3-wide w3-center">PATROCÍNIO</h2>
+    <p class="w3-opacity w3-center"><i> Patrocine nossa causa! </i></p>
     <div class="w3-row w3-padding-32">
       <div class="w3-center">
         <form action="/action_page.php" target="_blank">
           <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
             
             <div class=" w3-card w3-white w3-round w3-margin">
-              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+              <input class="w3-input w3-border" type="text" placeholder="Nome da empresa" required name="Name">
             </div>
             
             <div class=" w3-card w3-white w3-round w3-margin">
@@ -58,59 +122,45 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
               <input class="w3-input w3-border" type="text" placeholder="CEP" required name="Cep">
             </div>
         
+   
+            
+            <p class="w3-opacity w3-center"><i> Selecione o tipo de patrocinío que deseja realizar. </i>    <button class="w3-button w3-xmedium w3-circle w3-black"onclick="document.getElementById('download').style.display='block'">?</button></p> 
+            
+            <div id="download" class="w3-modal w3-animate-opacity">
+  <div class="w3-modal-content" style="padding:32px">
+    <div class="w3-container w3-white">
+      <i onclick="document.getElementById('download').style.display='none'" class="fa fa-remove w3-xlarge w3-button w3-transparent w3-right w3-xlarge"></i>
+      <h2 class="w3-wide">Tipos de Patrocínio</h2>
+      <p><b>Patrocínio Institucional: </b>Somente sua marca é promovida.</p>
+      <p><b>Patrocínio Promocional: </b>Não divulga muito a marca, mas
+oferece benefícios como cupons, descontos em produtos da marca.</p>
+<p><b>Patrocínio Híbrido: </b>A marca é promovida e oferece
+benefícios.</p>
+    </div>
+  </div>
+</div>
+
             
             <div class=" w3-card w3-white w3-round w3-margin">
-              <input class="w3-input w3-border" type="text" placeholder="Número" required name="Numero">
-            </div>
-            
-            <div class=" w3-card w3-white w3-round w3-margin">
-              <input class="w3-input w3-border" type="text" placeholder="Rua" required name="Rua">
-            </div>
-            
-            <div class=" w3-card w3-white w3-round w3-margin">
-              <input class="w3-input w3-border" type="text" placeholder="Bairro" required name="Bairro">
-            </div>
-            
-            <div class=" w3-card w3-white w3-round w3-margin">
-              <input class="w3-input w3-border" type="text" placeholder="Cidade" required name="Cidade">
-            </div>
+             <label class="container">Patrocínio Institucional
+  <input type="radio" checked="checked" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="container">Patrocínio Promocional
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="container">Patrocíno Híbrido
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
              
-            
-            <div class=" w3-card w3-white w3-round w3-margin">
-              <input class="w3-input w3-border" type="text" placeholder="UF" required name="Uf">
-            </div>
-            
-            <div class=" w3-card w3-white w3-round w3-margin">
-              <input class="w3-input w3-border" type="text" placeholder="Complemento" required name="Complemento">
-            </div>
-           
-            
-            <div class=" w3-card w3-white w3-round w3-margin">
-              <input class="w3-input w3-border" type="text" placeholder="Senha" required name="Senha">
-            </div>
-            
-            <p class="w3-opacity w3-center"><i> Para aceitar doações em dinheiro, é necessário cadastrar uma conta bancária. </i></p>
-            
-            <div class=" w3-card w3-white w3-round w3-margin">
-              <input class="w3-input w3-border" type="text" placeholder="Número da Conta" required name="NumConta">
-            </div>
-            
-            <div class=" w3-card w3-white w3-round w3-margin">
-              <input class="w3-input w3-border" type="text" placeholder="Agência Bancária" required name="AgBanco">
-            </div>
-            
-            <div class=" w3-card w3-white w3-round w3-margin">
-              <input class="w3-input w3-border" type="text" placeholder="Operação" required name="Op">
-            </div>
              
-            
-            <div class=" w3-card w3-white w3-round w3-margin">
-              <input class="w3-input w3-border" type="text" placeholder="Dígito" required name="Dig">
             </div>
             
             
         
-            <button class="w3-button w3-black w3-section w3-right" type="submit">ENVIAR</button>
+            <button class="w3-button w3-black w3-section w3-right" type="submit">Patrocinar</button>
             
           </div>
         </form>
@@ -129,6 +179,8 @@ function myFunction() {
     x.className = x.className.replace(" w3-show", "");
   }
 }
+
+
 </script>
 
 </body>
