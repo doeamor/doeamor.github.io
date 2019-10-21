@@ -1,5 +1,5 @@
 <html>
-<title>W3.CSS Template</title>
+<title>Doe amor</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -12,6 +12,24 @@
 
 <style>
 html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
+
+input[type=text] {
+  width: 100px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 3px 10px 3px 20px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+input[type=text]:focus {
+  width: 100%;
+}
 </style>
 <body class="w3-theme-l5">
 
@@ -22,6 +40,8 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
     <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white"> Pagina Inicial</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Feed</a>
     <p href="#" class="w3-bar-item w3-hide-small w3-padding-large navbar-right" style="margin-bottom: 0px">Seja Bem-Vindo APAE</p>
+  </div>
+
   </div>
 
 <!-- Navbar on small screens -->
@@ -42,10 +62,9 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
     <div class="w3-col m3">
       <!-- Profile -->
       <div class="w3-card w3-round w3-white">
-        <div class="w3-container">
-        <hr>
-         <p class="w3-center"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Capybara_%28Hydrochoerus_hydrochaeris%29.JPG" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
-  <h4 class="w3-center">APAE</h4>
+        <div class="w3-container w3-padding-16">
+         <p class="w3-center"><img src="https://jornaldaqui.com.br/wp-content/uploads/2018/09/apae-logo.png" 			class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
+  	<h4 class="w3-center"><b>APAE</b></h4>
         </div> 
       </div>
       <br>
@@ -54,42 +73,77 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
     </div>
     
     <!-- Middle Column -->
-    <div class="w3-col m7">
+    <div class="w3-col m8">
       
       <div class="w3-row-padding">
         <div class="w3-col m12">
           <div class="w3-card w3-round w3-white">
-            <div class="w3-container w3-padding">
-        <h4>Sobre nós</h4><br>
-        <p>Olá a todos nós da UNICEF estamos arrecadando doações para o dia das crianças e desde já em setembro estamos aceitando doações xoxo.</p>
-        <div class="w3-row-padding" style="margin:0 -8px">
-        </div>
-            </div>
-          </div>
-        </div>
-      </div>
       
-      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-        <h4>Informações:</h4><br>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      </div> 
+          <!-- Menu Container -->
+    <div class="w3-container w3-padding-16" id="menu" >
+  	<div class="w3-content">
+    <div class="w3-row w3-center w3-border w3-border-dark-grey">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');" id="myLink">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-white">Sobre nós</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Pasta');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-white">Informações</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-white">Doações recebidas</div>
+      </a>
+    </div>
+
+    <div id="Pizza" class="w3-container menu w3-padding-8 w3-white" >
+      <h1 style="font-size: 32px"><b>A APAE</b></h1>
+      <hr>
+   
+      <h1 style="font-size: 20px"><b>Quem somos ?</b></h1>
+      <p align="justify" class="w3-text-grey" style="font-size: 20px">As Apaes são organizações não governamentais, sem fins lucrativos, que trabalham para que as pessoas com deficiência intelectual e suas famílias vivam com melhor qualidade de vida e felizes.
+
+As Apaes são instituições de assistência social que oferecem serviços nas áreas de educação, saúde e assistência socia, contando, em muitos casos, com a parceria do Poder Público. Nossos métodos sustentáveis nos permitem continuar a fornecer um serviço especializado e de alta qualidade para todos que precisam, independentemente da idade e da classe social.
+
+Nossa equipe de profissionais dedicados e altamente qualificados presta serviços especializados em todo Espírito Santo. Trabalhamos para fornecer as habilidades, cuidados físicos e oportunidades necessárias para pessoas com deficiência intelectual façam parte integrante da nossa sociedade.</p>
       
-      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-        <h4>Histórico de doações:</h4><br>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      </div>     
+    </div>
+
+    <div id="Pasta" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Lasagna</b> <span class="w3-tag w3-grey w3-round">Popular</span> <span class="w3-right w3-tag w3-dark-grey w3-round">$13.50</span></h1>
+      <p class="w3-text-grey">Special sauce, mozzarella, parmesan, ground beef</p>
+      <hr>
+   
+      <h1><b>Ravioli</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$14.50</span></h1>
+      <p class="w3-text-grey">Ravioli filled with cheese</p>
+      <hr>
       
-      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-        <h4>Fotos:</h4><br>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      </div>
+      <h1><b>Spaghetti Classica</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$11.00</span></h1>
+      <p class="w3-text-grey">Fresh tomatoes, onions, ground beef</p>
+      <hr>
+
+      <h1><b>Seafood pasta</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$25.50</span></h1>
+      <p class="w3-text-grey">Salmon, shrimp, lobster, garlic</p>
+    </div>
+
+
+    <div id="Starter" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Today's Soup</b> <span class="w3-tag w3-grey w3-round">Seasonal</span><span class="w3-right w3-tag w3-dark-grey w3-round">$5.50</span></h1>
+      <p class="w3-text-grey">Ask the waiter</p>
+      <hr>
+   
+      <h1><b>Bruschetta</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$8.50</span></h1>
+      <p class="w3-text-grey">Bread with pesto, tomatoes, onion, garlic</p>
+      <hr>
       
-      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-        <h4>Post</h4><br>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      </div>           
-     
-    <!-- End Middle Column -->
+      <h1><b>Garlic bread</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$9.50</span></h1>
+      <p class="w3-text-grey">Grilled ciabatta, garlic butter, onions</p>
+      <hr>
+      
+      <h1><b>Tomozzarella</b> <span class="w3-right w3-tag w3-dark-grey w3-round">$10.50</span></h1>
+      <p class="w3-text-grey">Tomatoes and mozzarella</p>
+    </div><br>
+
+  </div>
+</div>
     </div>
       
   <!-- End Grid -->
@@ -120,7 +174,30 @@ function openNav() {
     x.className = x.className.replace(" w3-show", "");
   }
 }
+
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-Blue", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-Blue";
+}
+document.getElementById("myLink").click();
 </script>
+
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
 
 </body>
 </html>
